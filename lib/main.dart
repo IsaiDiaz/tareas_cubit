@@ -44,6 +44,7 @@ class MyHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     DropdownButton<String>(
+                        value: state.selectedLetter,
                         items: state.letters.map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
