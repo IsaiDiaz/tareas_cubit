@@ -16,7 +16,7 @@ class LetterArrayCubit extends Cubit<Letter_state>{
 
   void removeExistentLetter(String letter) {
     List<String> newLetters = List<String>.from(state.letters)..remove(letter);
-    emit(state.copyWith(letters: newLetters, selectedLetter: ''));
+    emit(state.copyWith(letters: newLetters, selectedLetter: newLetters.isEmpty ? '':newLetters.first));
   }
 
   void updateLetter(String oldLetter, String newLetter){
